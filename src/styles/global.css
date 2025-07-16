@@ -1,0 +1,28 @@
+@import "tailwindcss";
+
+/* Regular (400) */
+@font-face {
+  font-family: "Alata";
+  font-style: normal;
+  font-weight: 400;
+  src: url("/fonts/Alata-Regular.ttf") format("truetype");
+  font-display: swap;
+}
+
+/* Lite (300) */
+@font-face {
+  font-family: "JosefinSans";
+  font-style: normal;
+  font-weight: 300;
+  src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
+  font-display: swap;
+}
+
+@theme {
+  --color-theme-white: hsl(0, 0%, 100%);
+  --color-theme-black: hsl(0, 0%, 0%);
+  --color-theme-grey: hsl(0, 0%, 85%);
+
+  --font-alata: "Alato", "sans-serif";
+  --font-josefinsans: "JosefinSans", "sans-serif";
+}
