@@ -1,0 +1,21 @@
+---
+const navLinks = [
+  { href: "#", label: "About" },
+  { href: "#", label: "Careers" },
+  { href: "#", label: "Events" },
+  { href: "#", label: "Products" },
+  { href: "#", label: "Support" },
+];
+---
+
+<nav class="text-theme-white font-alata hidden text-sm md:block">
+  <ul class="flex flex-row gap-10">
+    {
+      navLinks.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
