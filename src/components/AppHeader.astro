@@ -59,9 +59,7 @@ import AppMobileMenu from "./AppMobileMenu.astro";
         menuToggle.setAttribute("aria-expanded", String(!isClosing));
       }
     }
-
     menuToggle?.addEventListener("click", () => toggleMenu());
-
     window.addEventListener("close-menu", () => toggleMenu(true));
   });
 </script>
