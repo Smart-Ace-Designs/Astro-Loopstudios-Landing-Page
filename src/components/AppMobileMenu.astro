@@ -23,7 +23,7 @@ const navLinks = [
         </svg>
       </button>
     </div>
-    <nav class="mt-20">
+    <nav class="mt-20" id="mobile-menu" aria-label="Mobile menu">
       <ul class="space-y-6">
         {
           navLinks.map((link) => (
@@ -41,3 +41,17 @@ const navLinks = [
     </nav>
   </div>
 </div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const closeButton = document.getElementById("close-menu");
+    const links = document.querySelectorAll("a");
+
+    function dispatchClose() {
+      window.dispatchEvent(new CustomEvent("close-menu"));
+    }
+
+    closeButton?.addEventListener("click", dispatchClose);
+    links.forEach((link) => link.addEventListener("click", dispatchClose));
+  });
+</script>

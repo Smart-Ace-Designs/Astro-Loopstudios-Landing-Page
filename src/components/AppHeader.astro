@@ -47,27 +47,19 @@ import AppMobileMenu from "./AppMobileMenu.astro";
 <script>
   document.addEventListener("astro:page-load", () => {
     const menuToggle = document.getElementById("menu-toggle");
-    const closeMenu = document.getElementById("close-menu");
     const mobileMenu = document.getElementById("mobile-menu");
-    const menuIcon = document.querySelector(".menu-icon");
-    const closeIcon = document.querySelector(".close-icon");
 
-    function toggleMenu() {
-      if (mobileMenu && menuIcon && closeIcon && menuToggle) {
-        mobileMenu.classList.toggle("hidden");
-        menuIcon.classList.toggle("hidden");
-        closeIcon.classList.toggle("hidden");
-        document.body.style.overflow = mobileMenu.classList.contains("hidden") ? "" : "hidden";
-        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
-        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+    function toggleMenu(forceClose = false) {
+      if (mobileMenu && menuToggle) {
+        const isClosing = forceClose || !mobileMenu.classList.contains("hidden");
+        mobileMenu.classList.toggle("hidden", isClosing);
+        document.body.style.overflow = isClosing ? "" : "hidden";
+        menuToggle.setAttribute("aria-expanded", String(!isClosing));
       }
     }
 
-    menuToggle?.addEventListener("click", toggleMenu);
-    closeMenu?.addEventListener("click", toggleMenu);
+    menuToggle?.addEventListener("click", () => toggleMenu());
 
-    document.querySelectorAll("#mobile-menu a").forEach((link) => {
-      link.addEventListener("click", toggleMenu);
-    });
+    window.addEventListener("close-menu", () => toggleMenu(true));
   });
 </script>
