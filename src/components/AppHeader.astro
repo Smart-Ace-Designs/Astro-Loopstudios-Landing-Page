@@ -1,5 +1,11 @@
 ---
-
+const navLinks = [
+  { href: "#", label: "About" },
+  { href: "#", label: "Careers" },
+  { href: "#", label: "Events" },
+  { href: "#", label: "Products" },
+  { href: "#", label: "Support" },
+];
 ---
 
 <div
@@ -12,14 +18,28 @@
         fill="#FFF"
         fill-rule="nonzero"></path></svg
     >
-    <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg" class="md:hidden"
-      ><g fill="#FFF" fill-rule="evenodd"><path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"></path></g
-      ></svg
-    >
+    <button type="button" class="cursor-pointer">
+      <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg" class="md:hidden">
+        <g fill="#FFF" fill-rule="evenodd">
+          <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"></path>
+        </g>
+      </svg>
+    </button>
+    <nav class="text-theme-white font-alata hidden text-sm md:block">
+      <ul class="flex flex-row gap-10">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
   </div>
-  <div class="border-theme-white max-w-[400px] border-2 p-6 lg:p-9 xl:max-w-[660px]">
+  <div class="border-theme-white max-w-[400px] border-2 p-6 lg:p-9 lg:pb-6 xl:max-w-[660px]">
     <p
-      class="font-josefinsans text-[2.5rem] leading-10 font-light text-white uppercase lg:leading-none xl:text-7xl"
+      class="font-josefinsans mb-0 text-[2.5rem] leading-10 text-white uppercase lg:leading-none xl:text-7xl"
     >
       Immersive experiences that deliver
     </p>
