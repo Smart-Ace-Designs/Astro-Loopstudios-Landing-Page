@@ -1,0 +1,43 @@
+---
+import AppHeaderLogo from "@/components/AppHeaderLogo.astro";
+
+const navLinks = [
+  { href: "#", label: "About" },
+  { href: "#", label: "Careers" },
+  { href: "#", label: "Events" },
+  { href: "#", label: "Products" },
+  { href: "#", label: "Support" },
+];
+---
+
+<div class="container mx-auto flex h-full items-start px-6 pt-10">
+  <div class="w-full">
+    <div class="flex items-center justify-between">
+      <AppHeaderLogo classes="h-6 w-35" />
+      <button id="close-menu" class="text-theme-white cursor-pointer" aria-label="Close menu">
+        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+            fill="#FFF"
+            fill-rule="evenodd"></path>
+        </svg>
+      </button>
+    </div>
+    <nav class="mt-20">
+      <ul class="space-y-6">
+        {
+          navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class="font-josefinsans hover:text-theme-grey text-2xl text-white uppercase"
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+</div>

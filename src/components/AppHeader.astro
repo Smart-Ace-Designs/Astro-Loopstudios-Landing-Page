@@ -1,18 +1,32 @@
 ---
 import AppHeaderLogo from "@/components/AppHeaderLogo.astro";
 import AppHeaderNav from "./AppHeaderNav.astro";
+import AppMobileMenu from "./AppMobileMenu.astro";
 ---
 
 <div
-  class="flex h-[650px] flex-col gap-40 bg-[url(../assets/images/mobile/image-hero.jpg)] bg-cover bg-no-repeat px-6 pt-10 md:gap-32 md:bg-[url(../assets/images/desktop/image-hero.jpg)] lg:px-20 lg:pt-12 xl:px-40 xl:pt-16"
+  class="relative flex h-[650px] flex-col gap-40 bg-[url(../assets/images/mobile/image-hero.jpg)] bg-cover bg-no-repeat px-6 pt-10 md:gap-32 md:bg-[url(../assets/images/desktop/image-hero.jpg)] lg:px-20 lg:pt-12 xl:px-40 xl:pt-16"
+  id="header"
 >
   <div class="flex items-center justify-between">
     <AppHeaderLogo classes="h-6 w-35 md:h-8 md:w-48" />
-    <button type="button" class="cursor-pointer">
-      <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg" class="md:hidden">
+    <button
+      type="button"
+      class="cursor-pointer md:hidden"
+      id="menu-toggle"
+      aria-label="Toggle menu"
+      aria-expanded="false"
+    >
+      <svg width="24" height="16" xmlns="http://www.w3.org/2000/svg" class="menu-icon">
         <g fill="#FFF" fill-rule="evenodd">
           <path d="M0 0h24v2H0zM0 7h24v2H0zM0 14h24v2H0z"></path>
         </g>
+      </svg>
+      <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" class="close-icon hidden">
+        <path
+          d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
+          fill="#FFF"
+          fill-rule="evenodd"></path>
       </svg>
     </button>
     <AppHeaderNav />
@@ -25,3 +39,35 @@ import AppHeaderNav from "./AppHeaderNav.astro";
     </p>
   </div>
 </div>
+
+<div id="mobile-menu" class="bg-theme-black fixed inset-0 z-1 hidden h-screen w-full">
+  <AppMobileMenu />
+</div>
+
+<script>
+  document.addEventListener("astro:page-load", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const closeMenu = document.getElementById("close-menu");
+    const mobileMenu = document.getElementById("mobile-menu");
+    const menuIcon = document.querySelector(".menu-icon");
+    const closeIcon = document.querySelector(".close-icon");
+
+    function toggleMenu() {
+      if (mobileMenu && menuIcon && closeIcon && menuToggle) {
+        mobileMenu.classList.toggle("hidden");
+        menuIcon.classList.toggle("hidden");
+        closeIcon.classList.toggle("hidden");
+        document.body.style.overflow = mobileMenu.classList.contains("hidden") ? "" : "hidden";
+        const isExpanded = menuToggle.getAttribute("aria-expanded") === "true";
+        menuToggle.setAttribute("aria-expanded", String(!isExpanded));
+      }
+    }
+
+    menuToggle?.addEventListener("click", toggleMenu);
+    closeMenu?.addEventListener("click", toggleMenu);
+
+    document.querySelectorAll("#mobile-menu a").forEach((link) => {
+      link.addEventListener("click", toggleMenu);
+    });
+  });
+</script>
