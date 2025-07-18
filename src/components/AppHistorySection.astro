@@ -1,0 +1,16 @@
+---
+import Image from "astro/components/Image.astro";
+import interactiveM from "@/assets/images/mobile/image-interactive.jpg";
+import interactiveDT from "@/assets/images/desktop/image-interactive.jpg";
+---
+
+<section class="bg-theme-white">
+  <div class="container mx-auto px-6 py-24">
+    <Image src={interactiveM} alt="A man experiencing a VR headset." class="w-full sm:hidden" />
+    <Image
+      src={interactiveDT}
+      alt="A man experiencing a VR headset."
+      class="hidden w-full sm:block"
+    />
+  </div>
+</section>
