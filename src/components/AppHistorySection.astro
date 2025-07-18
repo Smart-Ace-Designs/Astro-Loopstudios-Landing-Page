@@ -1,16 +1,27 @@
 ---
-import Image from "astro/components/Image.astro";
-import interactiveM from "@/assets/images/mobile/image-interactive.jpg";
-import interactiveDT from "@/assets/images/desktop/image-interactive.jpg";
+import { Image } from "astro:assets";
+import interactive from "@/assets/images/mobile/image-interactive.jpg";
 ---
 
 <section class="bg-theme-white">
-  <div class="container mx-auto px-6 py-24">
-    <Image src={interactiveM} alt="A man experiencing a VR headset." class="w-full sm:hidden" />
+  <div class="mx-auto max-w-6xl px-6 py-22">
     <Image
-      src={interactiveDT}
-      alt="A man experiencing a VR headset."
-      class="hidden w-full sm:block"
+      src={interactive}
+      alt="A man wearing a VR headset and enjoying it."
+      loading="eager"
+      width={731}
+      height={500}
+      sizes="(max-width: 767px) 654px, 731px"
     />
+    <div class="px-5">
+      <h2 class="font-josefinsans text-theme-black mt-10 text-center text-3xl leading-7 uppercase">
+        The leader in interactive VR
+      </h2>
+      <p class="text-theme-black mt-4 text-center text-sm leading-6 tracking-wide">
+        Founded in 2011, Loopstudios has been producing world-class virtual reality projects for
+        some of the best companies around the globe. Our award-winning creations have transformed
+        businesses through digital experiences that bind to their brand.
+      </p>
+    </div>
   </div>
 </section>
