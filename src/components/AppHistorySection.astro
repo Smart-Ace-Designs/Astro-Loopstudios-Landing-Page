@@ -3,8 +3,10 @@ import { Image } from "astro:assets";
 import interactive from "@/assets/images/image-interactive.jpg";
 ---
 
-<section class="bg-theme-white relative">
-  <div class="mx-auto max-w-6xl px-6 py-24">
+<section class="bg-theme-white">
+  <div
+    class="relative mx-auto flex max-w-[1440px] flex-col items-center px-6 py-24 xl:block xl:px-40 xl:py-40"
+  >
     <Image
       src={interactive}
       alt="A man wearing a VR headset and enjoying it."
@@ -13,16 +15,17 @@ import interactive from "@/assets/images/image-interactive.jpg";
       height={500}
       sizes="(max-width: 767px) 654px, 731px"
     />
+
     <div
-      class="bg-theme-white top-[40%] right-[6%] max-w-[623px] px-5 text-center sm:text-left xl:absolute xl:px-20 xl:py-12"
+      class="bg-theme-white top-[330px] right-[80px] max-w-[622px] px-6 py-12 text-center xl:absolute xl:px-20 xl:py-24 xl:text-left"
     >
       <h2
-        class="font-josefinsans text-theme-black mt-13 text-[2rem] leading-8 text-balance uppercase sm:leading-none md:text-5xl"
+        class="font-josefinsans text-theme-black text-[2rem] leading-8 text-balance uppercase sm:leading-none md:text-5xl"
       >
         The leader in interactive VR
       </h2>
       <p
-        class="text-theme-black/50 sm:text-md font-alata mt-5 text-sm leading-6 tracking-wide md:mt-6"
+        class="text-theme-black/50 sm:text-md font-alata mt-5 text-sm leading-6 tracking-wide md:mt-10"
       >
         Founded in 2011, Loopstudios has been producing world-class virtual reality projects for
         some of the best companies around the globe. Our award-winning creations have transformed
