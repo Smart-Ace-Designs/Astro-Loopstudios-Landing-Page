@@ -3,35 +3,43 @@ import AppShowcaseCard from "./AppShowcaseCard.astro";
 
 const creations = [
   {
-    image: "images/desktop/image-deep-earth.jpg",
+    imageDesktop: "images/desktop/image-deep-earth.jpg",
+    imageMobile: "images/mobile/image-deep-earth.jpg",
     title: "Deep Earth",
   },
   {
-    image: "images/desktop/image-night-arcade.jpg",
+    imageDesktop: "images/desktop/image-night-arcade.jpg",
+    imageMobile: "images/mobile/image-night-arcade.jpg",
     title: "Night Arcade",
   },
   {
-    image: "images/desktop/image-soccer-team.jpg",
+    imageDesktop: "images/desktop/image-soccer-team.jpg",
+    imageMobile: "images/mobile/image-soccer-team.jpg",
     title: "Soccer Team VR",
   },
   {
-    image: "images/desktop/image-grid.jpg",
+    imageDesktop: "images/desktop/image-grid.jpg",
+    imageMobile: "images/mobile/image-grid.jpg",
     title: "The Grid",
   },
   {
-    image: "/images/desktop/image-from-above.jpg",
+    imageDesktop: "/images/desktop/image-from-above.jpg",
+    imageMobile: "images/mobile/image-from-above.jpg",
     title: "From up above VR",
   },
   {
-    image: "images/desktop/image-pocket-borealis.jpg",
+    imageDesktop: "images/desktop/image-pocket-borealis.jpg",
+    imageMobile: "images/mobile/image-pocket-borealis.jpg",
     title: "Pocket Borealis",
   },
   {
-    image: "images/desktop/image-curiosity.jpg",
+    imageDesktop: "images/desktop/image-curiosity.jpg",
+    imageMobile: "images/mobile/image-curiosity.jpg",
     title: "The Curiosity",
   },
   {
-    image: "images/desktop/image-fisheye.jpg",
+    imageDesktop: "images/desktop/image-fisheye.jpg",
+    imageMobile: "images/mobile/image-fisheye.jpg",
     title: "Make it Fisheye",
   },
 ];
@@ -40,8 +48,16 @@ const creations = [
 <section>
   <div class="mx-auto max-w-[1440px] px-6 lg:px-40">
     <h2 class="text-center uppercase">Our Creations</h2>
-    <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
-      {creations.map((card) => <AppShowcaseCard image={card.image} title={card.title} />)}
+    <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+      {
+        creations.map((card) => (
+          <AppShowcaseCard
+            imageDesktop={card.imageDesktop}
+            imageMobile={card.imageMobile}
+            title={card.title}
+          />
+        ))
+      }
     </div>
   </div>
 </section>

@@ -1,13 +1,17 @@
 ---
 interface Props {
-  image?: string;
+  imageDesktop?: string;
+  imageMobile?: string;
   title: string;
 }
 
-const { image, title } = Astro.props;
+const { imageDesktop, imageMobile, title } = Astro.props;
 ---
 
-<article class="relative h-112 bg-cover bg-no-repeat" style={`background-image: url(${image})`}>
+<article
+  class="relative h-32 bg-cover bg-center bg-no-repeat sm:h-64 xl:h-112"
+  style={`--bg-mobile: url(${imageMobile}); --bg-desktop: url(${imageDesktop});`}
+>
   <div class="absolute inset-0 z-0 bg-black/30"></div>
   <p
     class="font-josefinsans absolute bottom-6 z-1 px-10 text-3xl text-balance text-white uppercase"
@@ -15,3 +19,14 @@ const { image, title } = Astro.props;
     {title}
   </p>
 </article>
+
+<style>
+  article {
+    background-image: var(--bg-mobile);
+  }
+  @media (min-width: 640px) {
+    article {
+      background-image: var(--bg-desktop);
+    }
+  }
+</style>
