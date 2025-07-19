@@ -7,6 +7,11 @@ interface Props {
 const { image, title } = Astro.props;
 ---
 
-<article>
-  <p>{title}</p>
+<article class="relative h-112 bg-cover bg-no-repeat" style={`background-image: url(${image})`}>
+  <div class="absolute inset-0 z-0 bg-black/30"></div>
+  <p
+    class="font-josefinsans absolute bottom-6 z-1 px-10 text-3xl text-balance text-white uppercase"
+  >
+    {title}
+  </p>
 </article>

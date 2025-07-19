@@ -3,43 +3,45 @@ import AppShowcaseCard from "./AppShowcaseCard.astro";
 
 const creations = [
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-deep-earth.jpg",
     title: "Deep Earth",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-night-arcade.jpg",
     title: "Night Arcade",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-soccer-team.jpg",
     title: "Soccer Team VR",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-grid.jpg",
     title: "The Grid",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "/images/desktop/image-from-above.jpg",
     title: "From up above VR",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-pocket-borealis.jpg",
     title: "Pocket Borealis",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-curiosity.jpg",
     title: "The Curiosity",
   },
   {
-    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    image: "images/desktop/image-fisheye.jpg",
     title: "Make it Fisheye",
   },
 ];
 ---
 
 <section>
-  <h2 class="text-center uppercase">Our Creations</h2>
-  <div class="grid grid-cols-1 gap-2 md:grid-cols-4">
-    {creations.map((card) => <AppShowcaseCard image={card.image} title={card.title} />)}
+  <div class="mx-auto max-w-[1440px] px-6 lg:px-40">
+    <h2 class="text-center uppercase">Our Creations</h2>
+    <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+      {creations.map((card) => <AppShowcaseCard image={card.image} title={card.title} />)}
+    </div>
   </div>
 </section>
