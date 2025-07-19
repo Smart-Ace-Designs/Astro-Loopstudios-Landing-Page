@@ -1,0 +1,45 @@
+---
+import AppShowcaseCard from "./AppShowcaseCard.astro";
+
+const creations = [
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "Deep Earth",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "Night Arcade",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "Soccer Team VR",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "The Grid",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "From up above VR",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "Pocket Borealis",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "The Curiosity",
+  },
+  {
+    image: "@/assets/images/mobile/image-deep-earth.jpg",
+    title: "Make it Fisheye",
+  },
+];
+---
+
+<section>
+  <h2 class="text-center uppercase">Our Creations</h2>
+  <div class="grid grid-cols-1 gap-2 md:grid-cols-4">
+    {creations.map((card) => <AppShowcaseCard image={card.image} title={card.title} />)}
+  </div>
+</section>
