@@ -1,48 +1,7 @@
 ---
 import AppShowcaseCard from "./AppShowcaseCard.astro";
 
-const creations = [
-  {
-    imageDesktop: "images/desktop/image-deep-earth.jpg",
-    imageMobile: "images/mobile/image-deep-earth.jpg",
-    title: "Deep Earth",
-  },
-  {
-    imageDesktop: "images/desktop/image-night-arcade.jpg",
-    imageMobile: "images/mobile/image-night-arcade.jpg",
-    title: "Night Arcade",
-  },
-  {
-    imageDesktop: "images/desktop/image-soccer-team.jpg",
-    imageMobile: "images/mobile/image-soccer-team.jpg",
-    title: "Soccer Team VR",
-  },
-  {
-    imageDesktop: "images/desktop/image-grid.jpg",
-    imageMobile: "images/mobile/image-grid.jpg",
-    title: "The Grid",
-  },
-  {
-    imageDesktop: "/images/desktop/image-from-above.jpg",
-    imageMobile: "images/mobile/image-from-above.jpg",
-    title: "From up above VR",
-  },
-  {
-    imageDesktop: "images/desktop/image-pocket-borealis.jpg",
-    imageMobile: "images/mobile/image-pocket-borealis.jpg",
-    title: "Pocket Borealis",
-  },
-  {
-    imageDesktop: "images/desktop/image-curiosity.jpg",
-    imageMobile: "images/mobile/image-curiosity.jpg",
-    title: "The Curiosity",
-  },
-  {
-    imageDesktop: "images/desktop/image-fisheye.jpg",
-    imageMobile: "images/mobile/image-fisheye.jpg",
-    title: "Make it Fisheye",
-  },
-];
+import creations from "@/data/showcase.json";
 ---
 
 <section>
@@ -50,11 +9,11 @@ const creations = [
     <h2 class="text-center uppercase">Our Creations</h2>
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
       {
-        creations.map((card) => (
+        creations.map((creation) => (
           <AppShowcaseCard
-            imageDesktop={card.imageDesktop}
-            imageMobile={card.imageMobile}
-            title={card.title}
+            imageDesktop={creation.imageDesktop}
+            imageMobile={creation.imageMobile}
+            title={creation.title}
           />
         ))
       }

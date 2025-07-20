@@ -2,6 +2,8 @@
 import "@/styles/global.css";
 import { ClientRouter } from "astro:transitions";
 
+import AppFooter from "@/components/AppFooter.astro";
+
 interface Props {
   title?: string;
   description?: string;
@@ -23,5 +25,6 @@ const { title = "Astro", description = "An Astro website." } = Astro.props;
     <main>
       <slot />
     </main>
+    <AppFooter />
   </body>
 </html>
