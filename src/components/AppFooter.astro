@@ -1,5 +1,33 @@
 ---
-
+import AppLogo from "./AppLogo.astro";
 ---
 
-<div>Footer</div>
+<footer class="bg-theme-black text-theme-white mt-20 h-40 py-8">
+  <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3 lg:px-40">
+    <div class="flex flex-col items-center gap-6">
+      <AppLogo classes="h-6 w-35 self-start" />
+      <nav>
+        <ul class="font-alata text-md flex flex-row gap-8 tracking-wide">
+          <li><a href="#">About</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">Products</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="flex flex-col items-center gap-6">
+      <p class="font-alata">Placeholder for images...</p>
+      <p class="font-alata text-theme-grey/50 text-md" id="footer-copyright"></p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const footerCopyright = document.getElementById("footer-copyright");
+    const currentYear: number = new Date().getFullYear();
+    if (footerCopyright)
+      footerCopyright.innerHTML = `&copy; ${currentYear} Loopstudios. All rights reserved.`;
+  });
+</script>
