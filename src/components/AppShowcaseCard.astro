@@ -6,6 +6,11 @@ interface Props {
 }
 
 const { imageDesktop, imageMobile, title } = Astro.props;
+
+function formatTitle(title: string) {
+  const words = title.split(" ");
+  return words.length === 2 ? `${words[0]}<br>${words[1]}` : title;
+}
 ---
 
 <article
@@ -14,10 +19,9 @@ const { imageDesktop, imageMobile, title } = Astro.props;
 >
   <div class="absolute inset-0 z-0 bg-black/30"></div>
   <p
-    class="font-josefinsans absolute bottom-6 z-1 px-10 text-3xl text-balance text-white uppercase"
-  >
-    {title}
-  </p>
+    class="font-josefinsans force-two-lines absolute bottom-6 z-1 w-full pl-10 text-3xl text-white uppercase"
+    set:html={formatTitle(title)}
+  />
 </article>
 
 <style>
