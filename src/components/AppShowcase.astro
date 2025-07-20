@@ -6,8 +6,17 @@ import creations from "@/data/showcase.json";
 
 <section>
   <div class="mx-auto max-w-[1440px] px-6 lg:px-40">
-    <h2 class="text-center uppercase">Our Creations</h2>
     <div class="grid grid-cols-1 gap-8 sm:grid-cols-2 xl:grid-cols-4">
+      <h2
+        class="font-josefinsans text-theme-black pb-4 text-center text-[2rem] uppercase sm:text-left xl:col-span-2"
+      >
+        Our Creations
+      </h2>
+      <a
+        href="/"
+        class="font-alata text-theme-black bg-theme-white border-theme-black order-last self-start justify-self-center border px-8 py-1 text-sm tracking-[.175em] uppercase sm:order-none sm:justify-self-end xl:col-span-2"
+        >See all</a
+      >
       {
         creations.map((creation) => (
           <AppShowcaseCard
