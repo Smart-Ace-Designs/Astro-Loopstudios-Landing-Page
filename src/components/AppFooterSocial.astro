@@ -1,0 +1,36 @@
+---
+const socialLinks = [
+  {
+    href: "https://facebook.com",
+    image: "images/icon-facebook.svg",
+    alt: "Facebook",
+  },
+  {
+    href: "https://x.com",
+    image: "images/icon-twitter.svg",
+    alt: "X",
+  },
+  {
+    href: "https://pinterest.com",
+    image: "images/icon-pinterest.svg",
+    alt: "Pinterest",
+  },
+  {
+    href: "https://instagram.com",
+    image: "images/icon-instagram.svg",
+    alt: "Instagram",
+  },
+];
+---
+
+<ul class="flex items-end justify-end gap-4">
+  {
+    socialLinks.map((link) => (
+      <li>
+        <a href={link.href} target="_blank" rel="noopener noreferrer">
+          <img src={link.image} alt={link.alt} />
+        </a>
+      </li>
+    ))
+  }
+</ul>
