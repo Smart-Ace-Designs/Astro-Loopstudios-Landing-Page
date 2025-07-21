@@ -3,7 +3,9 @@ import navLinks from "@/data/navitems.json";
 ---
 
 <nav>
-  <ul class="font-alata text-md flex flex-row gap-8 tracking-wide">
+  <ul
+    class="font-alata text-md flex flex-col gap-6 text-center tracking-wide md:flex-row md:gap-8 md:text-left"
+  >
     {
       navLinks.map((link) => (
         <li>

@@ -4,15 +4,21 @@ import AppFooterNav from "./AppFooterNav.astro";
 import AppFooterSocial from "./AppFooterSocial.astro";
 ---
 
-<footer class="bg-theme-black text-theme-white mt-44 h-40 py-8">
-  <div class="mx-auto flex max-w-[1440px] items-center justify-between px-6 py-3 lg:px-40">
-    <div class="flex flex-col items-center gap-6">
-      <AppLogo classes="h-6 w-35 self-start" />
+<footer class="bg-theme-black text-theme-white mt-25 h-fit py-12 md:mt-44 md:h-40 md:py-8">
+  <div
+    class="mx-auto flex max-w-[1440px] flex-col items-center justify-between px-6 py-3 md:flex-row lg:px-40"
+  >
+    <div class="flex flex-col items-center gap-10 md:gap-6">
+      <AppLogo classes="md:h-6 md:w-35 self-start h-[26px] w-41" />
       <AppFooterNav />
     </div>
-    <div class="flex w-full flex-col gap-6">
+    <div class="mt-12 flex w-full flex-col gap-6 md:mt-0">
       <AppFooterSocial />
-      <p class="font-alata text-theme-grey/50 text-md self-end" id="footer-copyright"></p>
+      <p
+        class="font-alata text-theme-grey/50 md:text-md self-center text-base md:self-end"
+        id="footer-copyright"
+      >
+      </p>
     </div>
   </div>
 </footer>
