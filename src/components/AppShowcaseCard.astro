@@ -17,9 +17,9 @@ function formatTitle(title: string) {
   class="relative h-28 bg-cover bg-center bg-no-repeat sm:h-64 xl:h-112"
   style={`--bg-mobile: url(${imageMobile}); --bg-desktop: url(${imageDesktop});`}
 >
-  <div class="absolute inset-0 z-0 bg-black/20"></div>
+  <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/0 to-black/60"></div>
   <p
-    class="font-josefinsans force-two-lines absolute bottom-4 z-1 w-48 pl-5 text-2xl leading-6 text-white uppercase md:bottom-6 md:w-full md:pl-10 md:text-3xl md:leading-normal"
+    class="font-josefinsans force-two-lines absolute bottom-4 z-1 w-48 pl-5 text-2xl leading-6 text-white uppercase md:bottom-8 md:w-full md:pl-10 md:text-3xl md:leading-none"
     set:html={formatTitle(title)}
   />
 </article>
