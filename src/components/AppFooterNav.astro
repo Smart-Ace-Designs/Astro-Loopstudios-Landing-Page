@@ -1,0 +1,15 @@
+---
+import navLinks from "@/data/navitems.json";
+---
+
+<nav>
+  <ul class="font-alata text-md flex flex-row gap-8 tracking-wide">
+    {
+      navLinks.map((link) => (
+        <li>
+          <a href={link.href}>{link.label}</a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
