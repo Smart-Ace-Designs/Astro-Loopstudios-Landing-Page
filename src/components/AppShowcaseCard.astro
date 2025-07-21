@@ -14,12 +14,12 @@ function formatTitle(title: string) {
 ---
 
 <article
-  class="relative h-28 bg-cover bg-center bg-no-repeat sm:h-64 xl:h-112"
+  class="relative h-29 bg-cover bg-center bg-no-repeat sm:h-64 xl:h-112"
   style={`--bg-mobile: url(${imageMobile}); --bg-desktop: url(${imageDesktop});`}
 >
   <div class="absolute inset-0 z-0 bg-gradient-to-b from-black/0 to-black/60"></div>
   <p
-    class="font-josefinsans force-two-lines absolute bottom-4 z-1 w-48 pl-5 text-2xl leading-6 text-white uppercase md:bottom-8 md:w-full md:pl-10 md:text-3xl md:leading-none"
+    class="font-josefinsans force-two-lines absolute bottom-5 z-1 w-48 pl-5 text-2xl leading-6 text-white uppercase md:bottom-8 md:w-full md:pl-10 md:text-3xl md:leading-none"
     set:html={formatTitle(title)}
   />
 </article>
