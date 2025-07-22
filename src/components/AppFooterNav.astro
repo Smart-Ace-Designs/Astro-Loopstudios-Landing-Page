@@ -1,5 +1,5 @@
 ---
-import navLinks from "@/data/navitems.json";
+import navItems from "@/data/nav-items.json";
 ---
 
 <nav aria-label="Footer navigation">
@@ -9,15 +9,15 @@ import navLinks from "@/data/navitems.json";
     aria-orientation="horizontal"
   >
     {
-      navLinks.map((link) => (
+      navItems.map((item) => (
         <li role="none">
           <a
-            href={link.href}
+            href={item.href}
             role="menuitem"
             class="text-theme-white after:bg-theme-white focus-visible:ring-offset-theme-black focus-visible:ring-theme-white relative pb-2 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-[1.5rem] focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:outline-none"
-            aria-current={Astro.url.pathname === link.href ? "page" : undefined}
+            aria-current={Astro.url.pathname === item.href ? "page" : undefined}
           >
-            {link.label}
+            {item.label}
           </a>
         </li>
       ))

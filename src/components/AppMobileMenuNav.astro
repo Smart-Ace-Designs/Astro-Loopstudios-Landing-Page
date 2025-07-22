@@ -1,17 +1,17 @@
 ---
-import navLinks from "@/data/navitems.json";
+import navItems from "@/data/nav-items.json";
 ---
 
 <nav class="mt-20" id="mobile-menu" aria-label="Mobile menu">
   <ul class="space-y-4">
     {
-      navLinks.map((link) => (
+      navItems.map((item) => (
         <li>
           <a
-            href={link.href}
+            href={item.href}
             class="font-josefinsans hover:border-theme-white border-b-2 border-transparent pb-2 text-2xl text-white uppercase transition-colors duration-300"
           >
-            {link.label}
+            {item.label}
           </a>
         </li>
       ))

@@ -1,7 +1,6 @@
 ---
 import AppShowcaseCard from "./AppShowcaseCard.astro";
-
-import creations from "@/data/showcase.json";
+import showcaseItems from "@/data/showcase-items.json";
 ---
 
 <section class="md:mt-6">
@@ -18,11 +17,11 @@ import creations from "@/data/showcase.json";
         >See all</a
       >
       {
-        creations.map((creation) => (
+        showcaseItems.map((showcaseItem) => (
           <AppShowcaseCard
-            imageDesktop={creation.imageDesktop}
-            imageMobile={creation.imageMobile}
-            title={creation.title}
+            imageDesktop={showcaseItem.imageDesktop}
+            imageMobile={showcaseItem.imageMobile}
+            title={showcaseItem.title}
           />
         ))
       }
