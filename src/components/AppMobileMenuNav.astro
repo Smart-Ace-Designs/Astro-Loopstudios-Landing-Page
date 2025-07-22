@@ -3,13 +3,13 @@ import navLinks from "@/data/navitems.json";
 ---
 
 <nav class="mt-20" id="mobile-menu" aria-label="Mobile menu">
-  <ul class="space-y-6">
+  <ul class="space-y-4">
     {
       navLinks.map((link) => (
         <li>
           <a
             href={link.href}
-            class="font-josefinsans hover:text-theme-grey hover:border-theme-white border-b-2 border-transparent pb-2 text-2xl text-white uppercase transition-colors duration-300"
+            class="font-josefinsans hover:border-theme-white border-b-2 border-transparent pb-2 text-2xl text-white uppercase transition-colors duration-300"
           >
             {link.label}
           </a>
