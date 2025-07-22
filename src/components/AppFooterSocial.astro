@@ -28,7 +28,7 @@ const socialLinks = [
     socialLinks.map((link) => (
       <li>
         <a href={link.href} target="_blank" rel="noopener noreferrer">
-          <img src={link.image} alt={link.alt} />
+          <img src={link.image} alt={link.alt} loading="lazy" />
         </a>
       </li>
     ))
