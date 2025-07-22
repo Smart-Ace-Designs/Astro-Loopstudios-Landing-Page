@@ -2,16 +2,20 @@
 import navLinks from "@/data/navitems.json";
 ---
 
-<nav>
+<nav aria-label="Footer navigation">
   <ul
     class="font-alata text-md flex flex-col gap-4 text-center tracking-wide md:flex-row md:gap-8 md:text-left"
+    role="menubar"
+    aria-orientation="horizontal"
   >
     {
       navLinks.map((link) => (
-        <li>
+        <li role="none">
           <a
             href={link.href}
-            class="text-theme-white after:bg-theme-white relative pb-2 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-[1.5rem]"
+            role="menuitem"
+            class="text-theme-white after:bg-theme-white focus-visible:ring-offset-theme-black focus-visible:ring-theme-white relative pb-2 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-[1.5rem] focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:outline-none"
+            aria-current={Astro.url.pathname === link.href ? "page" : undefined}
           >
             {link.label}
           </a>
