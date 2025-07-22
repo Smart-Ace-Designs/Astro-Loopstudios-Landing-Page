@@ -4,16 +4,19 @@ import AppHeader from "@/components/AppHeader.astro";
 
 <section
   class="relative flex h-[650px] flex-col gap-40 bg-[url(images/mobile/image-hero.jpg)] bg-cover bg-no-repeat px-6 py-10 md:gap-32 md:bg-[url(images/desktop/image-hero.jpg)] lg:px-20 lg:py-12 xl:px-40 xl:py-16"
+  role="region"
+  aria-labelledby="hero-heading"
 >
   <AppHeader />
   <div
     class="border-theme-white z-1 max-w-[400px] border-2 px-6 pt-6 pb-4 lg:px-9 lg:pt-9 lg:pb-6 xl:max-w-[660px]"
   >
-    <p
+    <h1
+      id="hero-heading"
       class="font-josefinsans text-[2.5rem] leading-10 text-white uppercase lg:leading-none xl:text-7xl"
     >
       Immersive experiences that deliver
-    </p>
+    </h1>
   </div>
-  <div class="bg-theme-black/50 absolute inset-0 z-0"></div>
+  <div class="bg-theme-black/50 absolute inset-0 z-0" aria-hidden="true"></div>
 </section>
