@@ -7,7 +7,10 @@ import navLinks from "@/data/navitems.json";
     {
       navLinks.map((link) => (
         <li>
-          <a href={link.href} class="hover:border-theme-white pb-2 hover:border-b-2">
+          <a
+            href={link.href}
+            class="hover:border-theme-white border-b-2 border-transparent pb-2 transition-colors duration-300"
+          >
             {link.label}
           </a>
         </li>
