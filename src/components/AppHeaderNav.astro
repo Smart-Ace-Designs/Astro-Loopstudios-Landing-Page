@@ -2,14 +2,19 @@
 import navItems from "@/data/nav-items.json";
 ---
 
-<nav class="text-theme-white font-alata hidden text-sm md:block">
-  <ul class="flex flex-row gap-10">
+<nav
+  class="text-theme-white font-alata hidden text-sm md:block"
+  role="navigation"
+  aria-label="Main navigation"
+>
+  <ul class="flex flex-row gap-10" role="list">
     {
       navItems.map((item) => (
-        <li>
+        <li role="listitem">
           <a
             href={item.href}
             class="text-theme-white after:bg-theme-white relative pb-2 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-[1.5rem]"
+            aria-current={item.href === "/" ? "page" : undefined}
           >
             {item.label}
           </a>
