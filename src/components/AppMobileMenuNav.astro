@@ -2,15 +2,14 @@
 import navItems from "@/data/nav-items.json";
 ---
 
-<nav class="mt-20" id="mobile-menu-nav" aria-label="Mobile menu" role="menu">
-  <ul class="space-y-4" role="menubar">
+<nav class="mt-20" id="mobile-menu-nav" aria-label="Mobile menu">
+  <ul class="space-y-4">
     {
       navItems.map((item, index) => (
-        <li role="menuitem" aria-posinset={index + 1} aria-setsize={navItems.length}>
+        <li aria-posinset={index + 1} aria-setsize={navItems.length}>
           <a
             href={item.href}
             class="font-josefinsans hover:border-theme-white border-b-2 border-transparent pb-2 text-2xl text-white uppercase transition-colors duration-300"
-            role="menuitem"
             aria-label={item.label}
           >
             {item.label}

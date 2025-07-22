@@ -4,7 +4,7 @@ import AppHeaderNav from "@/components/AppHeaderNav.astro";
 import AppMobileMenu from "@/components/AppMobileMenu.astro";
 ---
 
-<div class="z-1 flex items-center justify-between" role="banner">
+<div class="z-1 flex items-center justify-between">
   <AppLogo classes="h-6 w-35 md:h-8 md:w-48" />
   <button
     type="button"
@@ -18,7 +18,6 @@ import AppMobileMenu from "@/components/AppMobileMenu.astro";
       height="16"
       xmlns="http://www.w3.org/2000/svg"
       class="menu-icon"
-      role="img"
       aria-hidden="true"
     >
       <g fill="#FFF" fill-rule="evenodd">
@@ -30,7 +29,6 @@ import AppMobileMenu from "@/components/AppMobileMenu.astro";
       height="20"
       xmlns="http://www.w3.org/2000/svg"
       class="close-icon hidden"
-      role="img"
       aria-hidden="true"
     >
       <path
@@ -39,13 +37,12 @@ import AppMobileMenu from "@/components/AppMobileMenu.astro";
         fill-rule="evenodd"></path>
     </svg>
   </button>
-  <AppHeaderNav role="navigation" aria-label="Main navigation" />
+  <AppHeaderNav aria-label="Main navigation" />
 </div>
 
 <div
   id="mobile-menu"
   class="bg-theme-black fixed inset-0 z-2 hidden h-screen w-full"
-  role="navigation"
   aria-label="Main navigation"
 >
   <AppMobileMenu />

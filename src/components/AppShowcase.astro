@@ -3,7 +3,7 @@ import AppShowcaseCard from "./AppShowcaseCard.astro";
 import showcaseItems from "@/data/showcase-items.json";
 ---
 
-<section class="md:mt-6" role="region" aria-labelledby="showcase-heading">
+<section class="md:mt-6" aria-labelledby="showcase-heading">
   <div class="mx-auto max-w-[1440px] px-6 lg:px-40">
     <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:gap-7 xl:grid-cols-4">
       <h2
@@ -15,8 +15,6 @@ import showcaseItems from "@/data/showcase-items.json";
       <a
         href="/"
         class="font-alata text-theme-black bg-theme-white border-theme-black/50 text-md hover:bg-theme-black hover:text-theme-white order-last self-start justify-self-center border-2 px-10 py-2 tracking-[.3em] uppercase transition-colors duration-300 sm:order-none sm:justify-self-end xl:col-span-2"
-        role="link"
-        aria-label="See all"
       >
         See all
       </a>
