@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub](https://github.com/Smart-Ace-Designs/Astro-CHANGEME)
-- Live Site URL: [Netlify](https://smartacedesigns-astro-CHANGEME.netlify.app/)
+- Solution URL: [GitHub](https://github.com/Smart-Ace-Designs/Astro-Loopstudios-Landing-Page)
+- Live Site URL: [Netlify](https://smartacedesigns-astro-lslp.netlify.app/)
 
 ## My process
 
