@@ -3,12 +3,22 @@ import AppLogo from "@/components/AppLogo.astro";
 import AppMobileMenuNav from "@/components/AppMobileMenuNav.astro";
 ---
 
-<div class="container mx-auto flex h-full items-start px-6 pt-8">
+<div
+  class="container mx-auto flex h-full items-start px-6 pt-8"
+  role="dialog"
+  aria-modal="true"
+  aria-labelledby="mobile-menu-title"
+>
   <div class="flex w-full flex-col gap-20">
     <div class="flex items-center justify-between">
-      <AppLogo classes="h-6 w-35" />
-      <button id="close-menu" class="text-theme-white cursor-pointer" aria-label="Close menu">
-        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg">
+      <AppLogo classes="h-6 w-35" aria-hidden="true" />
+      <button
+        id="close-menu"
+        class="text-theme-white cursor-pointer"
+        aria-label="Close menu"
+        aria-controls="mobile-menu"
+      >
+        <svg width="20" height="20" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path
             d="M17.778.808l1.414 1.414L11.414 10l7.778 7.778-1.414 1.414L10 11.414l-7.778 7.778-1.414-1.414L8.586 10 .808 2.222 2.222.808 10 8.586 17.778.808z"
             fill="#FFF"
