@@ -1,6 +1,7 @@
 ---
 import "@/styles/global.css";
 import { ClientRouter } from "astro:transitions";
+import { Font } from "astro:assets";
 
 import AppFooter from "@/components/AppFooter.astro";
 
@@ -18,6 +19,8 @@ const { title = "Astro", description = "An Astro website." } = Astro.props;
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
+    <Font cssVariable="--font-josefinsans" preload />
+    <Font cssVariable="--font-alata" preload />
     <title>{title}</title>
     <ClientRouter />
   </head>
