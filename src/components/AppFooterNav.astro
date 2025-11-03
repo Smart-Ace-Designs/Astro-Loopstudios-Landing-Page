@@ -4,14 +4,14 @@ import navItems from "@/data/nav-items.json";
 
 <nav aria-label="Footer navigation">
   <ul
-    class="font-alata text-md flex flex-col gap-4 text-center tracking-wide md:flex-row md:gap-8 md:text-left"
+    class="flex flex-col gap-4 text-center font-alata text-md tracking-wide md:flex-row md:gap-8 md:text-left"
   >
     {
       navItems.map((item) => (
         <li>
           <a
             href={item.href}
-            class="text-theme-white after:bg-theme-white focus-visible:ring-offset-theme-black focus-visible:ring-theme-white relative pb-2 after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:transition-all after:duration-300 hover:after:w-[1.5rem] focus-visible:ring-2 focus-visible:ring-offset-4 focus-visible:outline-none"
+            class="relative pb-2 text-theme-white after:absolute after:bottom-0 after:left-1/2 after:h-[2px] after:w-0 after:-translate-x-1/2 after:bg-theme-white after:transition-all after:duration-300 hover:after:w-[1.5rem] focus-visible:ring-2 focus-visible:ring-theme-white focus-visible:ring-offset-4 focus-visible:ring-offset-theme-black focus-visible:outline-none"
             aria-current={Astro.url.pathname === item.href ? "page" : undefined}
           >
             {item.label}

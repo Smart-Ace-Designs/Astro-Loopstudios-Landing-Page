@@ -19,12 +19,12 @@ function formatTitle(title: string) {
 >
   <a href="/" aria-label={title}>
     <div
-      class="hover:bg-theme-white/70 transition-background absolute inset-0 z-0 bg-gradient-to-b from-black/0 to-black/60 duration-300"
+      class="transition-background absolute inset-0 z-0 bg-gradient-to-b from-black/0 to-black/60 duration-300 hover:bg-theme-white/70"
       aria-hidden="true"
     >
     </div>
     <p
-      class="font-josefinsans force-two-lines group-hover:text-theme-black text-theme-white pointer-events-none absolute bottom-5 z-1 w-48 pl-5 text-2xl leading-6 uppercase transition-colors duration-300 group-hover:font-bold md:bottom-8 md:w-52 md:pl-10 md:text-3xl md:leading-none"
+      class="force-two-lines pointer-events-none absolute bottom-5 z-1 w-48 pl-5 font-josefinsans text-2xl leading-6 text-theme-white uppercase transition-colors duration-300 group-hover:font-bold group-hover:text-theme-black md:bottom-8 md:w-52 md:pl-10 md:text-3xl md:leading-none"
       set:html={formatTitle(title)}
       aria-hidden="true"
     />
