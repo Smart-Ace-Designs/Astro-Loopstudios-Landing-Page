@@ -17,7 +17,6 @@ export default defineConfig({
         cssVariable: "--font-alata",
         weights: [400],
         styles: ["normal"],
-        subsets: ["latin"],
       },
       {
         provider: fontProviders.google(),
@@ -25,7 +24,6 @@ export default defineConfig({
         cssVariable: "--font-josefinsans",
         weights: [400, 700],
         styles: ["normal"],
-        subsets: ["latin"],
       },
     ],
   },
