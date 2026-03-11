@@ -8,22 +8,20 @@ export default defineConfig({
   vite: {
     plugins: [tailwindcss()],
   },
-  experimental: {
-    fonts: [
-      {
-        provider: fontProviders.google(),
-        name: "Alata",
-        cssVariable: "--font-alata",
-        weights: [400],
-        styles: ["normal"],
-      },
-      {
-        provider: fontProviders.google(),
-        name: "Josefin Sans",
-        cssVariable: "--font-josefinsans",
-        weights: [400, 700],
-        styles: ["normal"],
-      },
-    ],
-  },
+  fonts: [
+    {
+      provider: fontProviders.google(),
+      name: "Alata",
+      cssVariable: "--font-alata",
+      weights: [400],
+      styles: ["normal"],
+    },
+    {
+      provider: fontProviders.google(),
+      name: "Josefin Sans",
+      cssVariable: "--font-josefinsans",
+      weights: [400, 700],
+      styles: ["normal"],
+    },
+  ],
 });
